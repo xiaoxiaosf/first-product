@@ -1,0 +1,12 @@
+﻿<!doctype html>
+<html>
+<head>
+	#parse("/screen/common/meta-title.vm")
+	#parse("/screen/common/htmlheader.vm")
+</head>
+<body#if($iosTag) class="ios7"#end>
+	<div class="body">
+	    $screen_content
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<toolbox>
+    <xhtml>true</xhtml>
+    <tool>
+        <key>stringUtil</key>
+        <scope>application</scope>
+        <class>org.apache.commons.lang.StringUtils</class>
+    </tool>
+    <tool>
+        <key>hostUtil</key>
+        <scope>application</scope>
+        <class>com.eyeieye.melody.util.HostUtil</class>
+    </tool>
+    <tool>
+        <key>moneyUtil</key>
+        <scope>application</scope>
+        <class>com.miyun.biz.util.MoneyUtil</class>
+    </tool>
+    <tool>
+        <key>contain</key>
+        <scope>request</scope>
+        <class>com.eyeieye.melody.web.contain.Contain</class>
+    </tool>
+    <tool>
+        <key>iDemand</key>
+        <scope>request</scope>
+        <class>com.eyeieye.melody.web.velocity.IDemand</class>
+    </tool>
+    <tool>
+        <key>htmlUtils</key>
+        <scope>application</scope>
+        <class>com.eyeieye.melody.util.HtmlUtils</class>
+    </tool>
+    <tool>
+        <key>dateUtil</key>
+        <scope>application</scope>
+        <class>com.miyun.biz.util.DateUtil</class>
+    </tool>
+    
+    <tool>
+        <key>math</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.MathTool</class>
+    </tool>
+   
+    <tool>
+        <key>webShowUtil</key>
+        <scope>application</scope>
+        <class>com.miyun.biz.util.WebShowUtil</class>
+    </tool>
+    
+    <tool>
+        <key>adTools</key>
+        <scope>application</scope>
+        <class>com.miyun.biz.util.AdTools</class>
+    </tool>
+    
+</toolbox>

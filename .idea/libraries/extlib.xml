@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="extlib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../duoduo_f/duoduojr-core/extlib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../duoduo_f/duoduojr-core/extlib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../duoduo_f/duoduojr-core/extlib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../duoduo_f/duoduojr-core/extlib" recursive="false" type="SOURCES" />
+  </library>
+</component>

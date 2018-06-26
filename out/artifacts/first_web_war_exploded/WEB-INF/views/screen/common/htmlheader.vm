@@ -1,0 +1,53 @@
+<script src="$imgServer.get('/js/jquery-1.8.2.min.js')"></script>
+<script src="$imgServer.get('/js/mn.js')"></script>
+#if($iDemand.haveJs('common'))
+<script src="$imgServer.get('/scripts/common.js')"></script>
+#end
+#if($iDemand.haveJs('idangerous.swiper'))
+<script src="$imgServer.get('/js/idangerous.swiper-1.9.1.min.js')"></script>
+<script src="$imgServer.get('/js/idangerous.swiper.scrollbar-1.2.js')"></script>
+#end
+#if($iDemand.haveJs('WdatePicker'))
+<script type="text/javascript" src="$appServer.get('/scripts/My97DatePicker/WdatePicker.js')"></script> 
+#end
+#if($iDemand.haveJs('member'))
+<script src="$imgServer.get('/scripts/member/member.js')"></script>
+#end
+#if($iDemand.haveJs('ajaxfileupload'))
+<script type="text/javascript" src="$imgServer.get('/scripts/ajaxfileupload.js')" ></script>
+#end
+#if($iDemand.haveJs('verifyCode'))
+<script src="$imgServer.get('/scripts/member/verifyCode.js')"></script>
+#end
+#if($iDemand.haveJs('levelTwoProduct'))
+<script src="$imgServer.get('/scripts/withfund/levelTwoProduct.js')"></script>
+#end
+#if($iDemand.haveJs('memberFund'))
+<script src="$imgServer.get('/scripts/member/fund.js')"></script>
+#end
+#if($iDemand.haveJs('currencyConvert'))
+<script src="$imgServer.get('/scripts/currencyConvert.js')"></script>
+#end
+#if($iDemand.haveJs('area'))
+<script type="text/javascript" src="$imgServer.get('/scripts/area.js')"></script>
+#end
+#if($iDemand.haveJs('finSubscribe'))
+<script type="text/javascript" src="$imgServer.get('/scripts/financial/subscribe.js')"></script>
+#end
+
+#if($iDemand.haveJs('finTransfer'))
+<script type="text/javascript" src="$imgServer.get('/scripts/financial/transfer.js')"></script>
+#end
+
+<script type="text/javascript" src="$imgServer.get('/scripts/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js')"></script>
+<link rel="stylesheet" type="text/css" href="$imgServer.get('/scripts/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css')" media="all" />
+
+#if($iDemand.haveJs('myAlert'))
+<script type="text/javascript" src="$imgServer.get('/scripts/myAlert.js')"></script>
+$request.setAttribute('myAlert','true')
+#end
+<script type="text/javascript" src="//stat.tf.360.cn/search/c.js?u=1271036765" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="$imgServer.get('/styles/wap-20160101.css')" media="all" />
+<script language="javaScript">
+	var appServer = "$appServer";
+</script>

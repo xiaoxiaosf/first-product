@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="GB2312"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <!-- view -->
+    <bean id="velocityConfigurer"
+          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="WEB-INF/views/"/>
+        <property name="velocityProperties">
+            <map>
+                <entry key="input.encoding" value="${vm.file.encoding}"></entry>
+                <entry key="output.encoding" value="${web.encoding}"></entry>
+                <entry key="file.resource.loader.cache" value="${vm.cache}"></entry>
+                <entry key="file.resource.loader.modificationCheckInterval" value="-1"></entry>
+                <!-- cache directive 相关配置 -->
+                <entry key="userdirective"
+                       value="com.eyeieye.melody.web.velocity.directive.CacheDirective"></entry>
+                <!-- direcitive.cache.provider 配置cache的提供者 -->
+                <entry key="direcitive.cache.provider" value-ref="velocityViewCache"></entry>
+                <!-- direcitive.cache.close_velocity_cache 控制是否打开cache,如果是true,则关闭 -->
+                <entry key="direcitive.cache.dev.mode" value="close_velocity_cache"></entry>
+            </map>
+        </property>
+        <property name="configLocation" value="WEB-INF/conf/properties/velocity.properties"></property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="com.eyeieye.melody.web.velocity.resolver.FixedVelocityLayoutViewResolver">
+        <property name="order" value="10"/>
+        <property name="suffix" value=".vm"/>
+        <property name="prefix" value="screen/"/>
+        <property name="layoutUrl" value="layout/default.vm"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="dateToolAttribute" value="dateTool"/>
+        <property name="numberToolAttribute" value="numberTool"/>
+        <property name="toolboxConfigLocation" value="WEB-INF/conf/vm-toolbox.xml"/>
+        <property name="contentType" value="${web.contentType}"></property>
+        <property name="templateEncoding" value="${vm.file.encoding}"></property>
+    </bean>
+
+</beans>
