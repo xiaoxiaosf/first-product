@@ -22,4 +22,10 @@ public class eventController {
         return "002";
     }
 
+    @RequestMapping("/003")
+    public String index3(Model model){
+        model.addAttribute("33",333);
+        return "003";
+    }
+
 }
